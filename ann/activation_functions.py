@@ -1,20 +1,6 @@
 import numpy as np
 
 
-def activation_selector(activation_function_name: str):
-    activation_function_dict = {
-        'sigmoid': sigmoid,
-        'tanh': tanh,
-        'relu': relu,
-        'leaky_relu': leaky_relu,
-        'elu': elu,
-        'swish': swish,
-    }
-    if activation_function_name not in activation_function_dict.keys():
-        raise KeyError
-    return activation_function_dict[activation_function_name]
-
-
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
