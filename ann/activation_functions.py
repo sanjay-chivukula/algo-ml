@@ -5,6 +5,10 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
 
+def sigmoid_derivative(z):
+    return np.exp(-z) / ((1 + np.exp(-z)) ** 2)
+
+
 def tanh(x):
     numerator = 1 - np.exp(-2 * x)
     denominator = 1 + np.exp(-2 * x)
